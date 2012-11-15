@@ -17,7 +17,9 @@
 
 <div class="gridster">
     <ul>
-        <li data-row="1" data-col="1" data-sizex="1" data-sizey="1" class="bg-blue"></li>
+        <li data-row="1" data-col="1" data-sizex="1" data-sizey="1" class="bg-blue">
+            <i class="icon-camera-retro"></i>
+        </li>
         <li data-row="2" data-col="1" data-sizex="1" data-sizey="1" class="bg-blue"></li>
         <li data-row="3" data-col="1" data-sizex="1" data-sizey="1" class="bg-blue"></li>
         <li data-row="4" data-col="1" data-sizex="2" data-sizey="1" class="bg-blue"></li>
@@ -82,10 +84,14 @@
 <script src="../static/js/jquery.gridster.js"></script>
 <script>
     $(function () {
-        $(".gridster ul").gridster({
-            widget_margins: [10, 10],
-            widget_base_dimensions: [140, 140]
-        });
+        var size = document.height / 4
+            , padding = size / 50
+            , size = size - 5*padding
+            , $gridster = $(".gridster ul").gridster({
+                widget_margins: [padding, padding],
+                widget_base_dimensions: [size, size]
+            }).data('gridster');
+            $gridster.disable();
     });
 </script>
 </body>
