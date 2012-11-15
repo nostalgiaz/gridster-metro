@@ -1,9 +1,11 @@
+@import "reset";
 @import "vars";
 @import "font-awesome";
+@import "colors";
 
 .gridster {
   display: inline-block;
-  margin-right: 100px;
+  margin-left: 100px;
   width: auto;
 
   ul {
@@ -11,59 +13,19 @@
   }
 }
 
-// colors
-.gs_w {
-  &.bg-blue {
-    background-color: @blue;
-  }
-  &.bg-blueLight {
-    background-color: @blueLight;
-  }
-  &.bg-blueDark {
-    background-color: @blueDark;
-  }
-  &.bg-green {
-    background-color: @green;
-  }
-  &.bg-greenLight {
-    background-color: @greenLight;
-  }
-  &.bg-greenDark {
-    background-color: @greenDark;
-  }
-  &.bg-red {
-    background-color: @red;
-  }
-  &.bg-yellow {
-    background-color: @yellow;
-  }
-  &.bg-orange {
-    background-color: @orange;
-  }
-  &.bg-orangeDark {
-    background-color: @orangeDark;
-  }
-  &.bg-pink {
-    background-color: @pink;
-  }
-  &.bg-pinkDark {
-    background-color: @pinkDark;
-  }
-  &.bg-purple {
-    background-color: @purple;
-  }
-  &.bg-black {
-    background-color: @black;
-  }
-  &.bg-lighten {
-    background-color: @lighten;
-  }
-  &.bg-white {
-    background-color: @white;
-  }
-  &.bg-grayDark {
-    background-color: @grayDark;
+header {
+  background-color: @background-header;
+  margin-bottom: 50px;
+
+  h1 {
+    font-size: 40pt;
+    padding: 20px;
+    color: @white;
   }
 }
 
-
+body {
+  background-color: @background;
+  width: 10000px;
+/*overflow: hidden;*/
+}
