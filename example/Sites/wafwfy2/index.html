@@ -1,0 +1,43 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="static/jquery.gridster.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="static/jquery.gridster.js"></script>
+    <style>
+        body {
+            background: #004756;
+        }
+        ul {
+            list-style: none;
+        }
+        li {
+            background: white;
+        }
+    </style>
+</head>
+
+<body>
+<div class="gridster">
+    <ul>
+        <li data-row="1" data-col="1" data-sizex="2" data-sizey="4">backlog</li>
+        <li data-row="1" data-col="3" data-sizex="1" data-sizey="2">icebox</li>
+        <li data-row="1" data-col="4" data-sizex="2" data-sizey="2">velocity</li>
+        <li data-row="1" data-col="6" data-sizex="2" data-sizey="3">epic</li>
+        <li data-row="3" data-col="3" data-sizex="2" data-sizey="2">git</li>
+        <li data-row="3" data-col="5" data-sizex="1" data-sizey="1">bug</li>
+        <li data-row="4" data-col="5" data-sizex="2" data-sizey="1">git graph</li>
+        <li data-row="4" data-col="7" data-sizex="1" data-sizey="1">next iteration</li>
+    </ul>
+</div>
+<script>
+    $(function(){ //DOM Ready
+
+        $(".gridster ul").gridster({
+            widget_margins: [10, 10],
+            widget_base_dimensions: [140, 140]
+        });
+
+    });
+</script>
+</body>
+</html>
