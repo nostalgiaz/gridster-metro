@@ -16,7 +16,7 @@
     <ul>
         <li data-row="1" data-col="1" data-sizex="1" data-sizey="2" class="bg-blueDark"></li>
         <li data-row="1" data-col="2" data-sizex="2" data-sizey="1" class="bg-black"></li>
-        <li data-row="2" data-col="2" data-sizex="2" data-sizey="1" class="bg-green"></li>
+        <li data-row="2" data-col="2" data-sizex="2" data-sizey="1" class="bg-greenLight"></li>
         <li data-row="3" data-col="1" data-sizex="1" data-sizey="1" class="bg-red"></li>
         <li data-row="3" data-col="2" data-sizex="1" data-sizey="1" class="bg-blue"></li>
         <li data-row="3" data-col="3" data-sizex="1" data-sizey="1" class="bg-orange"></li>
@@ -47,14 +47,14 @@
 <script>
     $(function () {
         var rows = 3
-            , size = document.height / rows
-            , padding = size / 50
-            , size = size - 5*padding
-            , $gridster = $(".gridster ul").gridster({
-                widget_margins: [padding, padding],
-                widget_base_dimensions: [size, size],
-                avoid_overlapped_widgets: false
-            }).data('gridster');
+          , size = 3 * document.height / (4 * rows)
+          , padding = size / 50
+          , size = size - 5 * padding
+          , $gridster = $(".gridster ul").gridster({
+              widget_margins: [padding, padding],
+              widget_base_dimensions: [size, size],
+              avoid_overlapped_widgets: false
+          }).data('gridster');
 
         $gridster.disable();
     });
